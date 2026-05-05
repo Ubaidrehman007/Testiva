@@ -1,0 +1,184 @@
+<html th:replace="~{Student/studentbase::layout(~{::main})}">
+	<body>
+		<main>
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    
+			<!-- Main Section Started -->
+			<div class="row">
+			<marquee behavior="alternate" onmouseover="stop()" onmouseout="start()">
+				<h6 class="fw-bold text-dark">
+					Please don't try to exit <span style="color: #ef662f;">Full Screen Mode</span> or to <span style="color: #ef662f;"> Open New Tab</span> otherwise your Test will be automatically submitted. 			
+				</h6>
+			</marquee>
+			
+			<div class="row px-0 px-lg-5 p-2">
+				<div class="col-sm-12 pb-3">
+					<div class="box h-1  border-1 shadow-lg  p-4"
+						style="border-radius: 5px; background-color: white;">
+						<h5 th:text="${testname}" class="mt-2 fw-bold text-center"
+							style="color: #13C2C2; font-weight: 700;">Online Test</h5>
+					</div>
+				</div>
+
+				<input type="hidden" id="jsonData" th:value="${json}" />
+				<div class="container shadow p-5">
+					<div class="row text-dark">
+						<div class="col-sm-6 text-center">
+							<b>Total Alloted Time :</b> <label th:text="${tt}" id="TTime"
+								class="form-label"></label> min
+						</div>
+						<div class="col-sm-6 text-center">
+							<b>Total Alloted Question :</b> <label th:text="${tq}"
+								id="TQuestion" class="form-label"></label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 p-2 text-center text-white pt-3" style="background-color: #13C2C2; display: flex;">
+							<span> 
+								<label id="lblqno" style="font-size: 17px;"></label>. &nbsp;
+							</span> 
+							<span> 
+								<label id="lblquestion" style="font-size: 17px;"></label>
+							</span>
+						</div>
+					</div>
+
+					<!-- option start -->
+
+					<div class="row mt-4">
+						<div class="col-sm-6">
+							<div class="alert alert-secondary p-2">
+								<h6 class="px-1 m-0 pt-1">
+								A. <input type="radio" id="a" class="form-check-input" name="option" value="A" /> 
+									&nbsp; &nbsp;<label class="form-label pt-1" style="font-size: 14px;" for="a" id="lblA"></label>
+								</h6>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="alert alert-secondary p-2">
+								<h6 class="px-1 m-0 pt-1">
+									B. <input type="radio" id="b" class="form-check-input" name="option" value="B" /> 
+									&nbsp; &nbsp;<label class="form-label pt-1" style="font-size: 14px;" for="b" id="lblB"></label>
+								</h6>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mt-4">
+						<div class="col-sm-6">
+							<div class="alert alert-secondary p-2">
+								<h6 class="px-1 m-0 pt-1">
+									C. <input type="radio" id="c" class="form-check-input" name="option" value="C" /> 
+									&nbsp; &nbsp;<label class="form-label pt-1" style="font-size: 14px;" for="c" id="lblC"></label>
+								</h6>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="alert alert-secondary p-2">
+								<h6 class="px-1 m-0 pt-1">
+									D. <input type="radio" id="d" class="form-check-input" name="option" value="D" /> 
+									&nbsp; &nbsp;<label class="form-label pt-1" style="font-size: 14px;" for="d" id="lblD"></label>
+								</h6>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 mt-3 text-center pt-2 text-dark">
+							<span style="font-size: 18px; font-weight: 600;"> Time
+								Left : <label id="timer"
+								style="font-size: 18px; font-weight: 600;"></label>
+							</span>
+						</div>
+						<div class="col-sm-6 mt-3 text-center">
+							<button type="button" id="ButtonNext" class="btn px-5 text-light"
+								style="background-color: #13C2C2;">Next</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<form id="hiddenForm" action="/Student/TestOver" method="POST">
+			<input type="hidden" name="t" id="totalInput"> 
+			<input type="hidden" name="s" id="scoreInput">
+		</form>
+	
+	 <div id="modal" class="modal-overlay">
+        <div class="modal-content w-50 text-center text-dark">
+            <h2>Welcome to the Page!</h2>
+            <p>
+            	Please do not exit Full Screen Mode <br>
+                if you exit full screen mode Test will be automatically submitted.
+             	<br><span class="fw-bold">Thank You</span>
+            </p>
+            
+            
+            <button class="modal-close" id="closeModal">Start Test</button>
+        </div>
+    </div>
+    
+    <div id="fullscreenExitModal" class="modal-overlay">
+    <div class="modal-content w-50 text-center text-dark">
+        <h4>Fullscreen Mode Exited</h4>
+        <p>You exited fullscreen. Click below to return and continue your test.</p>
+        <button class="modal-close" id="returnToFullscreen">Return to Fullscreen</button>
+    </div>
+</div>
+    
+    
+    
+    
+	<style>
+	
+		.ps-5{
+			padding-left: 20px;
+		}
+		   /* Modal overlay */
+        .modal-overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal content */
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Close button */
+        .modal-close {
+            cursor: pointer;
+            background: #ef662f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+	</style>
+	
+		<script src="../js/examjs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			document.getElementById("returnToFullscreen").addEventListener("click", () => {
+		    	document.getElementById("fullscreenExitModal").style.display = 'none';
+		    	gofullscreen(); // now allowed because triggered by user click
+			});
+
+		</script>
+		
+		
+		</main>
+	</body>
+</html>

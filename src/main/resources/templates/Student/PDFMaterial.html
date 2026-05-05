@@ -1,0 +1,92 @@
+
+<html lang="en" th:replace="~{Student/studentbase::layout(~{::main})}">
+
+  
+
+
+<body>
+<main>
+  <section class="pdf-coming-soon-container">
+    <div class="content">
+      <h1><i class="fas fa-file-pdf"></i> PDF Materials Coming Soon</h1>
+      <p><i class="fas fa-book-open"></i> Well-structured notes, handouts & reference guides are on the way.</p>
+      <p><i class="fas fa-folder-open"></i> Your printable content hub for smarter learning!</p>
+      <div class="loader"></div>
+      <p class="contact-info">
+        <i class="fas fa-envelope"></i> Stay updated: 
+        <a href="mailto:pdf@yourdomain.com">pdf@yourdomain.com</a>
+      </p>
+    </div>
+  </section>
+  
+  <style>
+    /* ===== PDF Coming Soon Page Styles ===== */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .pdf-coming-soon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      text-align: center;
+      /*background: linear-gradient(120deg, #fdfbfb, #ebedee);*/
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .pdf-coming-soon-container .content {
+      max-width: 600px;
+      padding: 20px;
+      background: #ffffffee;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .pdf-coming-soon-container .content h1 {
+      font-size: 2.6rem;
+      color: #2e4053;
+      margin-bottom: 1rem;
+    }
+
+    .pdf-coming-soon-container .content p {
+      font-size: 1.1rem;
+      color: #566573;
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    .loader {
+      border: 5px solid #e5e7e9;
+      border-top: 5px solid #1f618d;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1.5s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+
+    .contact-info a {
+      color: #1f618d;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  
+</main>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html th:replace="~{Student/studentbase::layout(~{::main})}">
+  <body>
+    <main class="test-over-container">
+      <section class="congrats-box">
+        <h1>🎉 Congratulations!</h1>
+        <p class="main-message">Your test has been submitted successfully.</p>
+        <p class="encourage">Keep learning, keep growing 🌱</p>
+      </section>
+
+      <section class="summary-box">
+        <h2>📊 Test Summary</h2>
+        <ul>
+          <li><strong>Total Questions Attempted:</strong> <span th:text="${questionCount}">20</span></li>
+          <li><strong>Time Taken:</strong> <span th:text="${duration}">35 mins</span></li>
+          <li><strong>Status:</strong> Submitted</li>
+        </ul>
+      </section>
+
+      <section class="actions">
+        <a href="SeeResult" class="btn btn-review">🔍 Review Answers</a>
+        <a href="Dashboard" class="btn btn-dashboard">🏠 Go to Dashboard</a>
+      </section>
+
+      <style>
+        body {
+          margin: 0;
+          background-color: #f2f4f8;
+        }
+
+        .test-over-container {
+          font-family: 'Poppins', sans-serif;
+          max-width: 700px;
+          margin: 50px auto;
+          text-align: center;
+          padding: 40px 30px;
+          background: #ffffff;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+          border-radius: 10px;
+        }
+
+        .congrats-box h1 {
+          font-size: 2.5rem;
+          color: #1e90ff;
+          margin-bottom: 10px;
+          animation: fadeInDown 0.8s ease;
+        }
+
+        .main-message {
+          font-size: 1.2rem;
+          color: #333;
+          margin-bottom: 8px;
+        }
+
+        .encourage {
+          font-size: 1rem;
+          color: #2ecc71;
+          margin-top: 6px;
+        }
+
+        .summary-box {
+          margin: 30px auto;
+          text-align: left;
+          background-color: #fafafa;
+          padding: 20px;
+          border-radius: 8px;
+          border-left: 4px solid #1e90ff;
+        }
+
+        .summary-box h2 {
+          margin-bottom: 15px;
+          color: #444;
+          font-size: 1.4rem;
+        }
+
+        .summary-box li {
+          margin: 8px 0;
+          font-size: 1rem;
+          color: #333;
+        }
+
+        .actions {
+          margin-top: 30px;
+        }
+
+        .btn {
+          display: inline-block;
+          padding: 12px 24px;
+          margin: 10px;
+          border-radius: 6px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-review {
+          background-color: #1e90ff;
+          color: #fff;
+        }
+
+        .btn-dashboard {
+          background-color: #2ecc71;
+          color: #fff;
+        }
+
+        .btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+          opacity: 0.95;
+        }
+
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      </style>
+    </main>
+  </body>
+</html>

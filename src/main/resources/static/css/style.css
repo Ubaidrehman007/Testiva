@@ -1,0 +1,17 @@
+.program-card {
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.program-card:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.program-card:hover .icon-wrapper i {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+.icon-wrapper i {
+  transition: transform 0.3s ease;
+}

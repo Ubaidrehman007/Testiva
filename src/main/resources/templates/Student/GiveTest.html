@@ -1,0 +1,171 @@
+<html th:replace="~{Student/studentbase::layout(~{::main})}">
+<head>
+
+</head>
+
+<body>
+	<main>
+		<div class="row m-2">
+					<div class="col-sm-10 card shadow mx-auto">
+						<!-- Instructions Heading -->
+						<div class="row mt-2 mb-2">
+							<h3 style="color: #1890FF; font-weight: bold; margin: 4px;">Important
+								Instructions</h3>
+						</div>
+						<hr>
+
+						<!-- Instructions List -->
+						<div class="row mt-2 mb-3 mx-1">
+							<h6>Kindly go through the below mentioned set of
+								instructions before giving the online test</h6>
+							<ul style="margin-left: 20px; list-style-type: disc;">
+								<li style="margin-bottom: 5px;">All questions are
+									compulsory.</li>
+								<li style="margin-bottom: 5px;">This test is timer-based,
+									so manage your time efficiently and answer questions quickly.</li>
+								<li style="margin-bottom: 5px;">There is no negative
+									marking, but avoid random guessing.</li>
+								<li style="margin-bottom: 5px;">Do not open other tabs or
+									windows, as doing so will automatically submit your test.</li>
+								<li style="margin-bottom: 5px;">Read each question
+									carefully before answering.</li>
+								<li style="margin-bottom: 5px;">The questions are based on
+									your syllabus.</li>
+								<li style="margin-bottom: 5px;">Ensure a stable internet
+									connection throughout the test.</li>
+								<li style="margin-bottom: 5px;">Have a backup power source
+									in case of power outages.</li>
+								<li style="margin-bottom: 5px;">Keep your student ID and
+									login credentials ready before the test begins.</li>
+								<li style="margin-bottom: 5px;">Make sure your device is
+									fully charged or plugged in.</li>
+								<li style="margin-bottom: 5px;">Have a pen and paper ready
+									for rough work if needed.</li>
+								<li style="margin-bottom: 5px;">Log in to the test platform
+									at least 10 minutes before the start time.</li>
+								<li style="margin-bottom: 5px;">Familiarize yourself with
+									the test interface beforehand.</li>
+								<li style="margin-bottom: 5px;">If you encounter technical
+									issues, immediately notify the test proctor or technical
+									support.</li>
+								<li style="margin-bottom: 5px;">Avoid distractions and
+									ensure you are in a quiet environment.</li>
+								<li style="margin-bottom: 5px;">Use a comfortable and
+									ergonomic setup to maintain focus during the test.</li>
+							</ul>
+						</div>
+
+						<!-- Declaration Checkbox -->
+						<div style="display: flex; align-items: flex-start;">
+							<input type="checkbox" id="declare"
+								style="margin-right: 10px; margin-top: 3px;"> <label
+								for="declare" style="font-style: italic;"> I hereby
+								declare that I have read all the important instructions
+								mentioned above before giving the Online Test. </label>
+						</div>
+
+						<!-- Start Test Button -->
+						<div class="row m-3 text-center">
+
+							<!-- Button trigger modal -->
+							<button type="button" id="starttestbtn" class="px-4 py-2 mx-auto"
+								data-toggle="modal" data-target="#exampleModal">Start
+								Test</button>
+
+							<!-- Modal -->
+							<div class="modal fade mt-5" id="exampleModal" tabindex="-1"
+								role="dialog" aria-labelledby="exampleModalLabel"
+								aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Enter
+												Test ID :</h5>
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<input type="text" id="test_id" placeholder="Enter Test Id"
+												class="form-control bg-white" required="required">
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary "
+												data-dismiss="modal">Close</button>
+											<a href="#" id="test_link" onclick="TestStart();"
+												class="btn btn-primary">Start Test</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<style>
+			#starttestbtn{
+				color: white; 
+				border: none; 
+				border-radius: 20px; 
+				font-size: 1rem; 
+				background-color: #13C2C2; 
+				cursor: not-allowed;
+				width: 40% !important;
+			}
+		</style>
+	
+		<!-- jQuery (Bootstrap requires jQuery) -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- Popper.js for Bootstrap 4 -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+		
+		<input type="hidden" th:if="${msg}" th:value="${msg}" id="msg">
+		<script>
+			var msg = document.getElementById("msg");
+			if(msg!=null)
+			{
+				alert(msg.value);	
+			}
+		</script>
+			
+		<script>
+		var chk = document.getElementById("declare");
+		var btn = document.getElementById("starttestbtn");
+		btn.disabled=true;
+		chk.addEventListener('change', ()=>{
+			if(chk.checked)
+			{
+				btn.style.backgroundColor="#1890FF";
+				btn.style.cursor="pointer";
+				btn.disabled=false;
+			}
+			else{
+				btn.style.backgroundColor="#13C2C2";
+				btn.style.cursor="not-allowed";
+				btn.disabled=true;
+			}	
+		})
+		
+        function TestStart() {
+            // Get the value of the input field
+            const inputValue = document.getElementById('test_id').value;
+            const anchor = document.getElementById('test_link');
+            if(inputValue=="")
+            {
+            	alert("Please Enter Test Id");
+            }
+            else{
+            	anchor.href = `StartTest?testid=${encodeURIComponent(inputValue)}`;
+            }
+        }
+    </script>
+				
+	</main>
+</body>
+</html>

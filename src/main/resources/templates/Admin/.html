@@ -1,0 +1,49 @@
+<html th:replace="~{Admin/Adminbase::layout(~{::main})}">
+<body>
+<main class="container">
+    <div class="card shadow-lg w-100 mx-auto">
+        <div class="card-header bg-success text-white">
+            <h4>Manage Questions</h4>
+        </div>
+        <div class="card-body">
+            <table id="myTable" class="table table-bordered table-hover mt-2" >
+    <thead class="table-secondary">
+        <tr>
+            <th>ID</th>
+            <th>Question</th>
+            <th>Option A</th>
+            <th>Option B</th>
+            <th>Option C</th>
+            <th>Option D</th>
+            <th>Correct Answer</th>
+             <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="q : ${questionList}">
+            <td th:text="${q.id}"></td>
+            <td th:text="${q.question}"></td>
+            <td th:text="${q.a}"></td>
+            <td th:text="${q.b}"></td>
+            <td th:text="${q.c}"></td>
+            <td th:text="${q.d}"></td>
+            <td th:text="${q.correct}"></td>
+             
+             <td class="text-center">
+                <a th:href="@{EditQuestion(id=${q.id})}}" class="btn btn-warning btn-sm" > <i class="bi bi-pencil-square"></i> Edit</a>
+                <a th:href="@{EditQuestion(id=${q.id})}}" onclick="return confirm('Are you sure?')" class="btn btn-danger btn-sm"> <i class="bi bi-trash"></i> Delete</a>
+             </td>
+        </tr>
+    </tbody>
+</table>
+            
+        </div>
+    </div>
+</main>
+</body>
+</html>
+
+
+
+
+

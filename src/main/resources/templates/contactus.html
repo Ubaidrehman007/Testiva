@@ -1,0 +1,102 @@
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{base::Layout(~{::main})}">
+  <body>
+    <main class="bg-dark">
+
+      <!-- 💬 Hero Section -->
+      <section class=" text-light text-center py-5 mb-4">
+        <div class="container">
+          <h1 class="display-5 fw-bold animate__animated animate__fadeIn">📬 Get in Touch</h1>
+          <p class="lead animate__animated animate__fadeInUp">We’re here to answer your queries and listen to your feedback.</p>
+        </div>
+      </section>
+
+      <!-- 📞 Contact Section -->
+      <section class="container py-5">
+        <div class="row g-5">
+
+          <!-- 📌 Contact Info + Bigger Map -->
+          <div class="col-md-6">
+            <h4 class="fw-bold mb-3 text-light">Contact Information</h4>
+            <p class="text-light"><i class="bi bi-geo-alt-fill me-2 text-danger"></i><strong>Address:</strong> Dashauli Road, Lucknow, India</p>
+            <p class="text-light"><i class="bi bi-envelope-fill me-2 text-primary"></i><strong>Email:</strong> support@testportal.com</p>
+            <p class="text-light"><i class="bi bi-telephone-fill me-2 text-success"></i><strong>Phone:</strong> +91 9772255268</p>
+
+            <h5 class="fw-bold mt-4 mb-3 text-light">Follow Us</h5>
+            <div class="d-flex gap-3 mb-4">
+              <a href="#" class="text-primary"><i class="bi bi-facebook fs-4"></i></a>
+              <a href="#" class="text-info"><i class="bi bi-twitter fs-4"></i></a>
+              <a href="#" class="text-danger"><i class="bi bi-instagram fs-4"></i></a>
+              <a href="#" class="text-dark"><i class="bi bi-linkedin fs-4"></i></a>
+            </div>
+
+            <!-- 🗺️ Bigger Map Section -->
+            <div class="rounded shadow overflow-hidden" style="height: 350px;">
+              <iframe 
+                src="https://www.bing.com/maps/embed?h=350&w=1000&cp=26.9584~80.9874&lvl=14&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+                width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- 📋 Contact Form -->
+          <div class="col-md-6">
+            <form th:action="@{/ContactUs}" th:object="${contactenquiry}" method="post" class="p-4 rounded shadow bg-light">
+              <h3 class="text-center mb-4 text-primary fw-bold">Send Us a Message</h3>
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" th:field="${contactenquiry.name}" class="form-control" maxlength="60" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <select th:field="${contactenquiry.gender}" class="form-select" required>
+                  <option value="">-- Select --</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="contact" class="form-label">Contact Number</label>
+                <input type="tel" th:field="${contactenquiry.contactno}" id="contact" class="form-control" maxlength="10" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" th:field="${contactenquiry.email}" id="email" class="form-control" maxlength="100" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea th:field="${contactenquiry.address}" id="address" class="form-control" rows="1" maxlength="100" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="enquirytext" class="form-label">Your Message</label>
+                <textarea th:field="${contactenquiry.enquirytext}" id="enquirytext" class="form-control" rows="2" maxlength="200" required></textarea>
+              </div>
+
+              <div class="d-grid mt-4">
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+<input type="hidden" id="msg" th:if="${msg}" th:value ="${msg}">
+        <script type="text/javascript">
+        var msg = document.getElementById("msg");
+        if(msg.value!="")
+        	{
+        	alert(msg.value);
+        	}
+        
+        </script>
+
+    </main>
+  </body>
+</html>

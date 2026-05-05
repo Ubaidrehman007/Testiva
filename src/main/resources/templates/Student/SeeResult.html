@@ -1,0 +1,52 @@
+<html th:replace="~{Student/studentbase::layout(~{::main})}">
+<body>
+    <main class="container mt-4">
+        <h3 class="text-center mb-4">📊 Your Test Results</h3>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col" th:each="result : ${testResults}">
+                <div class="card shadow border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0" th:text="${result.testName}">Test Name</h5>
+                        <small th:text="'Test ID: ' + ${result.testId}"></small>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Total Marks:</strong> <span th:text="${result.totalMarks}"></span></p>
+                        <p><strong>Your Score:</strong> <span th:text="${result.totalScore}"></span></p>
+                        <p>
+                            <strong>Submitted At:</strong>
+                            <span th:text="${#temporals.format(result.submittedAt, 'dd MMM yyyy - hh:mm a')}"></span>
+                        </p>
+                        <div class="progress mt-5 rounded-5 border" style="height: 12px;">
+    						<div class="progress-bar rounded-5"
+         						role="progressbar"
+         						th:style="|width: ${(result.totalScore * 100) / result.totalMarks}%|"
+         						th:text="|${(result.totalScore * 100) / result.totalMarks}%|">
+    						</div>
+						</div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div th:if="${testResults.isEmpty()}" class="d-flex justify-content-center mt-5">
+    <div class="card text-center shadow border-0" style="max-width: 500px;">
+        <div class="card-body">
+            <img src="https://cdn-icons-png.flaticon.com/512/7486/7486803.png" 
+                 alt="No Results" style="height: 150px;" class="mb-3">
+            <h5 class="card-title text-muted">No Test Results Available</h5>
+            <p class="card-text text-secondary">
+                You haven't taken any tests yet. Once you complete a test, your results will appear here.
+            </p>
+            <a href="Dashboard" class="btn btn-outline-primary mt-2">
+                Go To Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+        
+    </main>
+</body>
+</html>

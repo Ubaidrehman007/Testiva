@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{Admin/Adminbase::layout(~{::main})}">
+
+<body>
+	<main class="container mt-4">
+		<div class="row">
+			<!-- Summary Cards -->
+			<div class="col-md-3 mb-4">
+				<div class="card shadow border-0 text-center">
+					<div class="card-body">
+						<i class="bi bi-people-fill display-6 text-primary"></i>
+						<h6 class="mt-2">Total Students</h6>
+						<h4 th:text="${totalStudents}">0</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 mb-4">
+				<div class="card shadow border-0 text-center">
+					<div class="card-body">
+						<i class="bi bi-briefcase-fill display-6 text-success"></i>
+						<h6 class="mt-2">Total Tests</h6>
+						<h4 th:text="${totalTests}">0</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 mb-4">
+				<div class="card shadow border-0 text-center">
+					<div class="card-body">
+						<i class="bi bi-card-checklist display-6 text-warning"></i>
+						<h6 class="mt-2">Total Results</h6>
+						<h4 th:text="${totalResults}">0</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3 mb-4">
+				<div class="card shadow border-0 text-center">
+					<div class="card-body">
+						<i class="bi bi-envelope-fill display-6 text-danger"></i>
+						<h6 class="mt-2">Total Enquiries</h6>
+						<h4 th:text="${totalEnquiries}">0</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navigation Cards -->
+		<div class="row g-4">
+			<div class="col-md-6">
+				<div class="card shadow border-0">
+					<div class="card-header bg-primary text-white">
+						<h5>Student Management</h5>
+					</div>
+					<div class="list-group list-group-flush">
+						<a href="ManageStudents"
+							class="list-group-item list-group-item-action">Manage
+							Students</a> <a href="SeeResult"
+							class="list-group-item list-group-item-action">Manage Results</a>
+						<a href="ViewEnquiries"
+							class="list-group-item list-group-item-action">Manage
+							Enquiries</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card shadow border-0">
+					<div class="card-header bg-success text-white">
+						<h5>Test Management</h5>
+					</div>
+					<div class="list-group list-group-flush">
+						<a href="ScheduleTest"
+							class="list-group-item list-group-item-action">Manage Tests</a> <a
+							href="ManageQuestionBank"
+							class="list-group-item list-group-item-action">Question Bank</a>
+						<a href="AddQuestion"
+							class="list-group-item list-group-item-action">Upload
+							Question Question</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Notifications and Logs -->
+		<div class="row g-4 mt-3">
+			<div class="col-md-6">
+				<div class="card shadow border-0">
+					<div class="card-header bg-info text-white">
+						<h5>Recent Test Toppers</h5>
+					</div>
+					<div class="card-body">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item" th:each="topper : ${recentToppers}">
+								<i class="bi bi-trophy text-secondary text-warning"></i> <span
+								th:text="${topper.name}"></span> <span class="text-success"
+								th:text="'['+ ${topper.totalScore +'/'+ topper.totalMarks}  +']'"></span>
+								&nbsp; - &nbsp; <span
+								th:text="${topper.testName +'['+ topper.testId +']'}"></span>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="card shadow border-0">
+					<div class="card-header bg-danger text-white">
+						<h5>Recent Enquiry</h5>
+					</div>
+					<div class="card-body">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item" th:each="enquiry : ${enquiries}"><i
+								class="bi bi-envelope text-info"></i> <span
+								th:text="${enquiry.name}"></span> &nbsp;  &nbsp; <br /> <strong>Enquary:</strong>
+								<span th:text="${enquiry.enquirytext}"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+</body>
+</html>

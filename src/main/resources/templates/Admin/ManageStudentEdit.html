@@ -1,0 +1,108 @@
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{Admin/Adminbase::layout(~{::main})}">
+<body>
+<main class="container">
+    <div class="card shadow mt-4">
+        <div class="card-header bg-info text-white text-center">
+            <h4>Edit Student Details</h4>
+        </div>
+        <div class="card-body">
+            <form th:action="@{ManageStudentEdit}" th:object="${studentInfo}" method="post" enctype="multipart/form-data" >
+                <input type="hidden" th:name="id" th:value="${student.id}" />
+
+                <!-- Name and Email -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" th:value="${student.name}" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" th:value="${student.email}" required>
+                    </div>
+                </div>
+
+                <!-- Contact No and DOB -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="contactno" class="form-label">Contact No</label>
+                        <input type="text" class="form-control" id="contactno" name="contactno" th:value="${student.contactno}" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob" name="dob" th:value="${student.dob}" required>
+                    </div>
+                </div>
+
+                <!-- Course and Branch Dropdowns -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="course" class="form-label">Course</label>
+                        <select class="form-select" name="course" id="course" required>
+                            <option disabled>Select Course</option>
+                            <option th:selected="${student.course == 'B.Tech'}" value="B.Tech">B.Tech</option>
+                            <option th:selected="${student.course == 'M.Tech'}" value="M.Tech">M.Tech</option>
+                            <option th:selected="${student.course == 'BCA'}" value="BCA">BCA</option>
+                            <option th:selected="${student.course == 'MCA'}" value="MCA">MCA</option>
+                            <option th:selected="${student.course == 'Diploma'}" value="Diploma">Diploma</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="branch" class="form-label">Branch</label>
+                        <select class="form-select" name="branch" id="branch" required>
+                            <option disabled>Select Branch</option>
+                            <option th:selected="${student.branch == 'Computer Science'}" value="Computer Science">Computer Science</option>
+                            <option th:selected="${student.branch == 'Electronics'}" value="Electronics">Electronics</option>
+                            <option th:selected="${student.branch == 'Electrical'}" value="Electrical">Electrical</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Year and Aadhar No -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="year" class="form-label">Year</label>
+                        <select class="form-select" name="year" id="year" required>
+                            <option disabled>Select Year</option>
+                            <option th:selected="${student.year}" value="First Year">First Year</option>
+                            <option th:selected="${student.year}" value="Second Year">Second Year</option>
+                            <option th:selected="${student.year}" value="Third Year">Third Year</option>
+                            <option th:selected="${student.year}" value="Fourth Year">Fourth Year</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="aadharno" class="form-label">Aadhar No</label>
+                        <input type="text" class="form-control" id="aadharno" name="aadharno" th:value="${student.aadharno}" required readonly>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-success">Update Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Styling -->
+    <style>
+        label {
+            font-weight: 600;
+        }
+        .form-label {
+            margin-bottom: 4px;
+        }
+        .card-header h4 {
+            margin: 0;
+        }
+        select.form-select option:disabled {
+            color: #aaa;
+        }
+    </style>
+    
+    
+        
+    
+</main>
+</body>
+</html>

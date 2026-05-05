@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::Layout(~{::main})}">
+<body>
+
+	<!-- 1. Hero Section -->
+	<main class="bg-dark text-light">
+		<section
+			class="text-light text-center d-flex align-items-center justify-content-center"
+			style="background: url('/images/bg.jpg') center/cover no-repeat; height: 90vh;">
+			<div
+				class="bg-dark bg-opacity-50 p-5 rounded animate__animated animate__fadeIn">
+				<h1 class="display-4 fw-bold ">Welcome to Integral University
+					Test Portal</h1>
+				<p class="lead animate__animated animate__fadeInUp">Offering
+					225+ programs, NAAC A+ accredited, and ranked among top
+					universities in UP.</p>
+				<a href="/Registration" class="btn btn-outline-light btn-lg mt-3">
+					<i class="bi bi-arrow-right-circle me-1"></i>Get Started
+				</a>
+			</div>
+		</section>
+
+
+		<!-- why Choose us -->
+		<section class=" py-5 text-center">
+			<div class="container">
+				<h2 class="mb-4">Why Choose Integral University?</h2>
+				<div class="row g-4">
+					<div class="col-md-4">
+						<i class="bi bi-award-fill display-5 text-success mb-2"></i>
+						<h5>NAAC A+ Accredited</h5>
+						<p>Recognized for academic excellence and infrastructure.</p>
+					</div>
+					<div class="col-md-4">
+						<i class="bi bi-people-fill display-5 text-info mb-2"></i>
+						<h5>Experienced Faculty</h5>
+						<p>Learn from highly qualified and industry-experienced
+							professors.</p>
+					</div>
+					<div class="col-md-4">
+						<i class="bi bi-briefcase-fill display-5 text-warning mb-2"></i>
+						<h5>Great Placements</h5>
+						<p>Top companies recruit from our campus every year.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- 2. How to Participate -->
+		<section class="container py-5">
+			<h2 class="text-center mb-5 text-white">How to Participate</h2>
+			<div class="row g-4 text-center">
+				<div class="col-md-4">
+					<div
+						class="card h-100 shadow-sm p-4 animate__animated animate__fadeInUp">
+						<i class="bi bi-person-plus-fill display-4 text-primary mb-3"></i>
+						<h5>Register</h5>
+						<p>Create student/admin account to begin.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div
+						class="card h-100 shadow-sm p-4 animate__animated animate__fadeInUp">
+						<i class="bi bi-list-check display-4 text-success mb-3"></i>
+						<h5>Select Test</h5>
+						<p>Pick your program and upcoming exam.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div
+						class="card h-100 shadow-sm p-4 animate__animated animate__fadeInUp">
+						<i class="bi bi-laptop display-4 text-warning mb-3"></i>
+						<h5>Take Test</h5>
+						<p>Log in, attempt MCQs, get instant results.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 3. Test Format & Guidelines -->
+		<section class="bg-dark py-5">
+			<div class="container">
+				<h2 class="text-center mb-4 text-white">Test Format &
+					Guidelines</h2>
+				<p class="text-center mb-5 text-white">Know what to expect
+					before attempting the exam — your roadmap to a smooth test
+					experience.</p>
+				<div class="row g-5 align-items-stretch">
+
+					<!-- Left: Cards -->
+					<div class="col-lg-7">
+						<div class="row g-4 h-100">
+							<!-- Cards same as before -->
+							<!-- Duration -->
+							<div class="col-sm-6">
+								<div class="card h-100 text-center shadow-sm p-4">
+									<i class="bi bi-hourglass-split display-5 text-primary mb-2"></i>
+									<h6 class="fw-bold">Duration</h6>
+									<p class="mb-0">60–90 Minutes</p>
+								</div>
+							</div>
+							<!-- Eligibility -->
+							<div class="col-sm-6">
+								<div class="card h-100 text-center shadow-sm p-4">
+									<i class="bi bi-person-check-fill display-5 text-success mb-2"></i>
+									<h6 class="fw-bold">Eligibility</h6>
+									<p class="mb-0">B-Tech CS, IT & CS Allied Students</p>
+								</div>
+							</div>
+							<!-- Language -->
+							<div class="col-sm-6">
+								<div class="card h-100 text-center shadow-sm p-4">
+									<i class="bi bi-translate display-5 text-warning mb-2"></i>
+									<h6 class="fw-bold">Language</h6>
+									<p class="mb-0">English</p>
+								</div>
+							</div>
+							<!-- Mode -->
+							<div class="col-sm-6">
+								<div class="card h-100 text-center shadow-sm p-4">
+									<i class="bi bi-globe display-5 text-danger mb-2"></i>
+									<h6 class="fw-bold">Mode</h6>
+									<p class="mb-0">Online (Web-Based)</p>
+								</div>
+							</div>
+							<!-- Question Type -->
+							<div class="col-sm-12">
+								<div class="card h-100 text-center shadow-sm p-4">
+									<i class="bi bi-ui-checks-grid display-5 text-info mb-2"></i>
+									<h6 class="fw-bold">Question Type</h6>
+									<p class="mb-0">Multiple Choice Questions (MCQs)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Right: Full-height Image -->
+					<div class="col-lg-5 d-flex">
+						<div class="w-100 h-100 overflow-hidden rounded shadow-sm">
+							<img src="/images/quiz.jpg" alt="Test Format Illustration"
+								class="img-fluid h-100 w-100 object-fit-cover animate__animated animate__fadeInRight"
+								style="object-fit: cover;">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- 4. Programs & Test Courses -->
+		<section class="container py-5">
+			<h2 class="text-center mb-4 text-light fw-bold display-5">Programs
+				& Available Courses</h2>
+			<p class="text-center text-light  mb-5">Explore our diverse
+				academic offerings across disciplines at Integral University.</p>
+			<div class="row g-4">
+
+				<!-- Program Card Start -->
+				<div class="col-md-6 col-lg-4">
+					<div
+						class="card h-100 text-center shadow-sm p-4 border-0 d-flex flex-column justify-content-between">
+						<div>
+							<div
+								class="icon-wrapper mb-3 mx-auto rounded-circle bg-primary bg-opacity-10 d-flex align-items-center justify-content-center"
+								style="width: 80px; height: 80px;">
+								<i class="bi bi-cpu display-6 text-primary"></i>
+							</div>
+							<h5 class="fw-bold">Engineering</h5>
+							<ul class="list-unstyled mt-3 mb-4 fs-6 text-muted">
+								<li>B.Tech (CSE, ECE, ME, Civil, AI & ML)</li>
+								<li>M.Tech (Various Specializations)</li>
+								<li>Diploma in Engineering</li>
+							</ul>
+						</div>
+						<a href="/apply/engineering"
+							class="btn btn-outline-primary btn-sm">Apply Now</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div
+						class="card h-100 text-center shadow-sm p-4 border-0 d-flex flex-column justify-content-between">
+						<div>
+							<div
+								class="icon-wrapper mb-3 mx-auto rounded-circle bg-success bg-opacity-10 d-flex align-items-center justify-content-center"
+								style="width: 80px; height: 80px;">
+								<i class="bi bi-capsule-pill display-6 text-success"></i>
+							</div>
+							<h5 class="fw-bold">Pharmacy & Medical</h5>
+							<ul class="list-unstyled mt-3 mb-4 fs-6 text-muted">
+								<li>B.Pharm / D.Pharm / Pharm.D</li>
+								<li>B.Sc Nursing / BPT / BMLT</li>
+								<li>MBBS / MD (via NEET)</li>
+							</ul>
+						</div>
+						<a href="/apply/medical" class="btn btn-outline-success btn-sm">Apply
+							Now</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div
+						class="card h-100 text-center shadow-sm p-4 border-0 d-flex flex-column justify-content-between">
+						<div>
+							<div
+								class="icon-wrapper mb-3 mx-auto rounded-circle bg-warning bg-opacity-10 d-flex align-items-center justify-content-center"
+								style="width: 80px; height: 80px;">
+								<i class="bi bi-briefcase display-6 text-warning"></i>
+							</div>
+							<h5 class="fw-bold">Management & Commerce</h5>
+							<ul class="list-unstyled mt-3 mb-4 fs-6 text-muted">
+								<li>BBA / B.Com (Hons)</li>
+								<li>MBA (HR, Finance, Marketing, IB)</li>
+								<li>M.Com</li>
+							</ul>
+						</div>
+						<a href="/apply/management"
+							class="btn btn-outline-warning btn-sm text-dark">Apply Now</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div
+						class="card h-100 text-center shadow-sm p-4 border-0 d-flex flex-column justify-content-between">
+						<div>
+							<div
+								class="icon-wrapper mb-3 mx-auto rounded-circle bg-danger bg-opacity-10 d-flex align-items-center justify-content-center"
+								style="width: 80px; height: 80px;">
+								<i class="bi bi-balance-scale display-6 text-danger"></i>
+							</div>
+							<h5 class="fw-bold">Law & Humanities</h5>
+							<ul class="list-unstyled mt-3 mb-4 fs-6 text-muted">
+								<li>BA LLB / BBA LLB</li>
+								<li>LLB / LLM</li>
+								<li>BA (English, Political Science, Sociology)</li>
+							</ul>
+						</div>
+						<a href="/apply/law" class="btn btn-outline-danger btn-sm">Apply
+							Now</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div
+						class="card h-100 text-center shadow-sm p-4 border-0 d-flex flex-column justify-content-between">
+						<div>
+							<div
+								class="icon-wrapper mb-3 mx-auto rounded-circle bg-info bg-opacity-10 d-flex align-items-center justify-content-center"
+								style="width: 80px; height: 80px;">
+								<i class="bi bi-tree-fill display-6 text-info"></i>
+							</div>
+							<h5 class="fw-bold">Agriculture & Life Sciences</h5>
+							<ul class="list-unstyled mt-3 mb-4 fs-6 text-muted">
+								<li>B.Sc (Hons) Agriculture / Horticulture</li>
+								<li>B.Tech Agricultural Engineering</li>
+								<li>M.Sc (Botany, Zoology, Biotech)</li>
+							</ul>
+						</div>
+						<a href="/apply/agriculture" class="btn btn-outline-info btn-sm">Apply
+							Now</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div
+						class="card h-100 text-center shadow-sm p-4 border-0 d-flex flex-column justify-content-between">
+						<div>
+							<div
+								class="icon-wrapper mb-3 mx-auto rounded-circle bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center"
+								style="width: 80px; height: 80px;">
+								<i class="bi bi-laptop-fill display-6 text-secondary"></i>
+							</div>
+							<h5 class="fw-bold">Computer Applications</h5>
+							<ul class="list-unstyled mt-3 mb-4 fs-6 text-muted">
+								<li>BCA / MCA</li>
+								<li>B.Sc IT / M.Sc IT</li>
+								<li>PGDCA</li>
+							</ul>
+						</div>
+						<a href="/apply/computers"
+							class="btn btn-outline-secondary btn-sm">Apply Now</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Students Achievements -->
+		<section class="container py-5 text-center">
+			<h2 class="mb-4 text-light">Our Achievers & Recruiters</h2>
+			<div class="row g-4">
+				<div class="col-md-6">
+					<div class="bg-white p-4 rounded shadow">
+						<h5 class="text-success ">Top Scorer 2024: Ramesh Gupta</h5>
+						<p class="text-dark">Scored 98% in Computer Science Aptitude
+							Test.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="bg-white p-4 rounded shadow">
+						<h5 class="text-info">Our Recruiters</h5>
+						<p class="text-dark">Infosys, TCS, HCL, Amazon, Wipro, Byju’s
+							and more.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- 5. Testimonials -->
+		<section class="bg-dark text-light py-5">
+			<div class="container">
+				<h2 class="text-center mb-5">What Our Students Say</h2>
+				<div id="homeTestimonialCarousel" class="carousel slide"
+					data-bs-ride="carousel">
+					<div class="carousel-inner text-center">
+						<div
+							class="carousel-item active animate__animated animate__fadeIn">
+							<p class="fs-5 fst-italic">"Smooth interface, instant
+								scoring—made my test prep breezy!"</p>
+							<h5 class="fw-bold mt-3">– Ayesha (B.Tech Applicant)</h5>
+						</div>
+						<div class="carousel-item animate__animated animate__fadeIn">
+							<p class="fs-5 fst-italic">"Admin dashboard is a
+								lifesaver—managing hundreds of students with ease."</p>
+							<h5 class="fw-bold mt-3">– Mr. Sharma (Exam Coordinator)</h5>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button"
+						data-bs-target="#homeTestimonialCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+					<button class="carousel-control-next" type="button"
+						data-bs-target="#homeTestimonialCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- 6. FAQs -->
+		<section class="container py-5">
+			<h2 class="text-center mb-5 text-white fw-bold display-5">Frequently
+				Asked Questions</h2>
+
+			<div class="accordion" id="homeFaqAccordion">
+
+				<!-- FAQ 1 -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="homeFaq1">
+						<button class="accordion-button" type="button"
+							data-bs-toggle="collapse" data-bs-target="#homeCollapse1"
+							aria-expanded="true" aria-controls="homeCollapse1">Who
+							can register?</button>
+					</h2>
+					<div id="homeCollapse1" class="accordion-collapse collapse show"
+						data-bs-parent="#homeFaqAccordion">
+						<div class="accordion-body">All eligible UG/PG aspirants of
+							Integral University.</div>
+					</div>
+				</div>
+
+				<!-- FAQ 2 -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="homeFaq2">
+						<button class="accordion-button collapsed" type="button"
+							data-bs-toggle="collapse" data-bs-target="#homeCollapse2"
+							aria-expanded="false" aria-controls="homeCollapse2">Is
+							the test fully online?</button>
+					</h2>
+					<div id="homeCollapse2" class="accordion-collapse collapse"
+						data-bs-parent="#homeFaqAccordion">
+						<div class="accordion-body">Yes. All assessments run on this
+							secure web portal.</div>
+					</div>
+				</div>
+
+				<!-- FAQ 3 -->
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="homeFaq3">
+						<button class="accordion-button collapsed" type="button"
+							data-bs-toggle="collapse" data-bs-target="#homeCollapse3"
+							aria-expanded="false" aria-controls="homeCollapse3">
+							When are results announced?</button>
+					</h2>
+					<div id="homeCollapse3" class="accordion-collapse collapse"
+						data-bs-parent="#homeFaqAccordion">
+						<div class="accordion-body">Instant MCQ tests show scores
+							immediately; descriptive tests processed within 24 hours.</div>
+					</div>
+				</div>
+
+				<!-- Collapsible extra FAQs wrapper (no extra spacing) -->
+				<div id="extraFaqs" class="accordion collapse">
+
+					<!-- FAQ 4 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="homeFaq4">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#homeCollapse4"
+								aria-expanded="false" aria-controls="homeCollapse4">
+								Can I retake the test?</button>
+						</h2>
+						<div id="homeCollapse4" class="accordion-collapse collapse"
+							data-bs-parent="#extraFaqs">
+							<div class="accordion-body">Yes, but reattempts depend on
+								admin approval and schedule.</div>
+						</div>
+					</div>
+
+					<!-- FAQ 5 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="homeFaq5">
+							<button class="accordion-button collapsed" type="button"
+								data-bs-toggle="collapse" data-bs-target="#homeCollapse5"
+								aria-expanded="false" aria-controls="homeCollapse5">Is
+								there a fee for registration?</button>
+						</h2>
+						<div id="homeCollapse5" class="accordion-collapse collapse"
+							data-bs-parent="#extraFaqs">
+							<div class="accordion-body">No, registration is completely
+								free for eligible students.</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Toggle Button -->
+				<div class="text-center mt-4">
+					<button class="btn btn-outline-light btn-sm px-4" type="button"
+						data-bs-toggle="collapse" data-bs-target="#extraFaqs"
+						aria-expanded="false" aria-controls="extraFaqs">View More
+						FAQs</button>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+</body>
+</html>

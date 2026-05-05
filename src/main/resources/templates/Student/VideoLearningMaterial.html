@@ -1,0 +1,93 @@
+
+<html lang="en" th:replace="~{Student/studentbase::layout(~{::main})}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Learning Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+
+<body>
+<main>
+  <section class="coming-soon-container ">
+    <div class="content">
+      <h1><i class="fas fa-video"></i> Learning Hub Coming Soon</h1>
+      <p><i class="fas fa-graduation-cap"></i> A smarter way to learn is on its way!</p>
+      <p><i class="fas fa-play-circle"></i> Engaging video content, curated for your success.</p>
+      <div class="loader"></div>
+      <p class="contact-info">
+        <i class="fas fa-envelope"></i> Get notified: 
+        <a href="mailto:learn@yourdomain.com">learn@yourdomain.com</a>
+      </p>
+    </div>
+  </section>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .coming-soon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      text-align: center;
+     /* background: linear-gradient(120deg, #dbe9f4, #f1f8ff);*/
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .coming-soon-container .content {
+      max-width: 600px;
+      padding: 20px;
+      background: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .coming-soon-container .content h1 {
+      font-size: 2.8rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .coming-soon-container .content p {
+      font-size: 1.1rem;
+      color: #34495e;
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #2980b9;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1.5s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+
+    .contact-info a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</main>
+</body>
+</html>

@@ -1,18 +1,18 @@
 # ---------- Stage 1 : Build ----------
-FROM eclipse-temurin:17-jdk-alpine AS builder
+FROM eclipse-temurin:21-jdk-alpine AS builder
 
 LABEL authors="Ubaidrehman007"
 
 WORKDIR /app
 
-# Copy Maven wrapper files
+# Copy Maven Wrapper
 COPY mvnw .
 COPY .mvn .mvn
 
-# Give permission
+# Give execute permission
 RUN chmod +x mvnw
 
-# Copy pom.xml first for dependency caching
+# Copy pom.xml
 COPY pom.xml .
 
 # Download dependencies
@@ -21,19 +21,19 @@ RUN ./mvnw dependency:go-offline
 # Copy source code
 COPY src src
 
-# Build jar
+# Build Spring Boot jar
 RUN ./mvnw clean package -DskipTests
 
 
 # ---------- Stage 2 : Run ----------
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
-# Copy jar from builder stage
+# Copy built jar
 COPY --from=builder /app/target/*.jar app.jar
 
-# Expose application port
+# Expose Spring Boot port
 EXPOSE 8484
 
 # Run application

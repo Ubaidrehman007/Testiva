@@ -71,29 +71,39 @@ public class AdminController {
 	@GetMapping("/Dashboard")
 	public String ShowDashboard(Model model) {
 
-		if (session.getAttribute("loggedInAdmin") == null) {
-			return "redirect:/AdminLogin";
-		}
+	    if (session.getAttribute("loggedInAdmin") == null) {
+	        return "redirect:/AdminLogin";
+	    }
 
-		long totalStudents = userRepo.count() - 1;
-		long totalTests = testInfoRepo.count();
-		long totalResults = testResultRepo.count();
-		long totalEnquiries = contactEnquiryRepo.count();
+	    long totalStudents = userRepo.count() - 1;
+	    long totalTests = testInfoRepo.count();
+	    long totalResults = testResultRepo.count();
+	    long totalEnquiries = contactEnquiryRepo.count();
 
-		TestInfo testInfo = testInfoRepo.findTopByOrderByTestIdDesc();
-		List<TestResult> recentToppers = testResultRepo.findTop5ByTestIdOrderByTotalScoreDesc(testInfo.getTestId());
-		List<ContactEnquiry> enquiries = contactEnquiryRepo.findTop5ByOrderByEnquirydateDesc();
-		List<ContactEnquiry> notificationenquiry = contactEnquiryRepo.findTop5ByOrderByEnquirydateDesc();
+	    List<TestResult> recentToppers = new ArrayList<>();
 
-		model.addAttribute("totalStudents", totalStudents);
-		model.addAttribute("totalTests", totalTests);
-		model.addAttribute("totalResults", totalResults);
-		model.addAttribute("totalEnquiries", totalEnquiries);
-		model.addAttribute("recentToppers", recentToppers);
-		model.addAttribute("enquiries", enquiries);
-		model.addAttribute("notificationenquiry", notificationenquiry);
+	    TestInfo testInfo = testInfoRepo.findTopByOrderByTestIdDesc();
 
-		return "Admin/Dashboard";
+	    if (testInfo != null) {
+	        recentToppers = testResultRepo
+	                .findTop5ByTestIdOrderByTotalScoreDesc(testInfo.getTestId());
+	    }
+
+	    List<ContactEnquiry> enquiries =
+	            contactEnquiryRepo.findTop5ByOrderByEnquirydateDesc();
+
+	    List<ContactEnquiry> notificationenquiry =
+	            contactEnquiryRepo.findTop5ByOrderByEnquirydateDesc();
+
+	    model.addAttribute("totalStudents", totalStudents);
+	    model.addAttribute("totalTests", totalTests);
+	    model.addAttribute("totalResults", totalResults);
+	    model.addAttribute("totalEnquiries", totalEnquiries);
+	    model.addAttribute("recentToppers", recentToppers);
+	    model.addAttribute("enquiries", enquiries);
+	    model.addAttribute("notificationenquiry", notificationenquiry);
+
+	    return "Admin/Dashboard";
 	}
 
 	@GetMapping("/UpdateProfilePic")

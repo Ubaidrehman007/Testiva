@@ -14,18 +14,28 @@
 	<name>Testiva</name>
 	<description>Im creating a Major Project for my Academic Project Submission</description>
 	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	
+	
+		<licenses>
+    <license>
+        <name>MIT License</name>
+        <url>https://opensource.org/licenses/MIT</url>
+    </license>
+</licenses>
+<developers>
+    <developer>
+        <name>Ubaid Rehman</name>
+        <email>urkhan556@gmail.com</email>
+        <url>https://github.com/Ubaidrehman007</url>
+    </developer>
+</developers>
+<scm>
+    <url>https://github.com/Ubaidrehman007/Testiva</url>
+    <connection>scm:git:https://github.com/Ubaidrehman007/Testiva.git</connection>
+    <developerConnection>scm:git:https://github.com/Ubaidrehman007/Testiva.git</developerConnection>
+</scm>
+	
+	
 	<properties>
 		<java.version>21</java.version>
 	</properties>

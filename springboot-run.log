@@ -1,0 +1,219 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.project:Testiva >-------------------------
+[INFO] Building Testiva 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.3:run (default-cli) > test-compile @ Testiva >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Testiva ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 633 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ Testiva ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Testiva ---
+[INFO] skip non existing resourceDirectory C:\Users\urkha\Desktop\springboot\Testiva\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ Testiva ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.3:run (default-cli) < test-compile @ Testiva <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.3:run (default-cli) @ Testiva ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2026-05-07T23:14:43.843+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : Starting TestivaApplication using Java 24.0.1 with PID 22948 (C:\Users\urkha\Desktop\springboot\Testiva\target\classes started by urkha in C:\Users\urkha\Desktop\springboot\Testiva)
+2026-05-07T23:14:43.848+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-07T23:14:43.939+05:30  INFO 22948 --- [Testiva] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-07T23:14:43.941+05:30  INFO 22948 --- [Testiva] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-07T23:14:44.836+05:30  INFO 22948 --- [Testiva] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-07T23:14:44.912+05:30  INFO 22948 --- [Testiva] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+2026-05-07T23:14:45.549+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8484 (http)
+2026-05-07T23:14:45.566+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-07T23:14:45.567+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-05-07T23:14:45.626+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-07T23:14:45.628+05:30  INFO 22948 --- [Testiva] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1685 ms
+2026-05-07T23:14:45.834+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-07T23:14:45.884+05:30  INFO 22948 --- [Testiva] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2026-05-07T23:14:45.925+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-07T23:14:46.312+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-07T23:14:46.347+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-07T23:14:47.702+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41c34b2
+2026-05-07T23:14:47.705+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-07T23:14:48.298+05:30  INFO 22948 --- [Testiva] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-07T23:14:49.415+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-07T23:14:49.963+05:30  INFO 22948 --- [Testiva] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-07T23:14:50.571+05:30  WARN 22948 --- [Testiva] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-07T23:14:50.605+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-07T23:14:51.170+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-07T23:14:51.209+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8484 (http) with context path '/'
+2026-05-07T23:14:51.221+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : Started TestivaApplication in 8.021 seconds (process running for 8.651)
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+2026-05-07T23:17:54.537+05:30  INFO 22948 --- [Testiva] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 21 class path changes (0 additions, 20 deletions, 1 modification)
+2026-05-07T23:17:54.542+05:30  INFO 22948 --- [Testiva] [       Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-07T23:17:54.548+05:30  INFO 22948 --- [Testiva] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-07T23:17:54.552+05:30  INFO 22948 --- [Testiva] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-07T23:17:54.555+05:30  INFO 22948 --- [Testiva] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-07T23:17:54.655+05:30  INFO 22948 --- [Testiva] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2026-05-07T23:17:54.729+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : Starting TestivaApplication using Java 24.0.1 with PID 22948 (C:\Users\urkha\Desktop\springboot\Testiva\target\classes started by urkha in C:\Users\urkha\Desktop\springboot\Testiva)
+2026-05-07T23:17:54.730+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-07T23:17:54.897+05:30  INFO 22948 --- [Testiva] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-07T23:17:54.899+05:30  INFO 22948 --- [Testiva] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-05-07T23:17:55.020+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8484 (http)
+2026-05-07T23:17:55.023+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-07T23:17:55.023+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-05-07T23:17:55.045+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-07T23:17:55.046+05:30  INFO 22948 --- [Testiva] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 314 ms
+2026-05-07T23:17:55.085+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-07T23:17:55.088+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-07T23:17:55.096+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-07T23:17:55.098+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-05-07T23:17:56.092+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@c1220a3
+2026-05-07T23:17:56.093+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-05-07T23:17:56.633+05:30  INFO 22948 --- [Testiva] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-07T23:17:56.653+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-07T23:17:56.653+05:30  INFO 22948 --- [Testiva] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-07T23:17:56.681+05:30  WARN 22948 --- [Testiva] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-07T23:17:56.694+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-07T23:17:56.843+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-07T23:17:56.855+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8484 (http) with context path '/'
+2026-05-07T23:17:56.859+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : Started TestivaApplication in 2.161 seconds (process running for 194.283)
+2026-05-07T23:17:56.861+05:30  INFO 22948 --- [Testiva] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-07T23:17:58.530+05:30  INFO 22948 --- [Testiva] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 20 class path changes (20 additions, 0 deletions, 0 modifications)
+2026-05-07T23:17:58.535+05:30  INFO 22948 --- [Testiva] [       Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-07T23:17:58.539+05:30  INFO 22948 --- [Testiva] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-07T23:17:58.540+05:30  INFO 22948 --- [Testiva] [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-07T23:17:58.544+05:30  INFO 22948 --- [Testiva] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-05-07T23:17:58.733+05:30  INFO 22948 --- [Testiva] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2026-05-07T23:17:58.825+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : Starting TestivaApplication using Java 24.0.1 with PID 22948 (C:\Users\urkha\Desktop\springboot\Testiva\target\classes started by urkha in C:\Users\urkha\Desktop\springboot\Testiva)
+2026-05-07T23:17:58.825+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-07T23:17:58.948+05:30  INFO 22948 --- [Testiva] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-07T23:17:58.965+05:30  INFO 22948 --- [Testiva] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 5 JPA repository interfaces.
+2026-05-07T23:17:59.039+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8484 (http)
+2026-05-07T23:17:59.040+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-07T23:17:59.041+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2026-05-07T23:17:59.057+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-07T23:17:59.058+05:30  INFO 22948 --- [Testiva] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 231 ms
+2026-05-07T23:17:59.081+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-07T23:17:59.084+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-07T23:17:59.091+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-07T23:17:59.092+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-05-07T23:18:00.517+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@7e49097e
+2026-05-07T23:18:00.519+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-05-07T23:18:01.016+05:30  INFO 22948 --- [Testiva] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-07T23:18:01.155+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-07T23:18:01.488+05:30  INFO 22948 --- [Testiva] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-07T23:18:01.647+05:30  WARN 22948 --- [Testiva] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-07T23:18:01.659+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-07T23:18:01.782+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-07T23:18:01.797+05:30  INFO 22948 --- [Testiva] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8484 (http) with context path '/'
+2026-05-07T23:18:01.802+05:30  INFO 22948 --- [Testiva] [  restartedMain] com.project.Testiva.TestivaApplication   : Started TestivaApplication in 2.997 seconds (process running for 199.227)
+2026-05-07T23:18:01.803+05:30  INFO 22948 --- [Testiva] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+Hibernate: select ti1_0.id,ti1_0.branch,ti1_0.course,ti1_0.number_of_question,ti1_0.start_time,ti1_0.status,ti1_0.test_duration,ti1_0.test_id,ti1_0.test_name,ti1_0.year from test_info ti1_0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20:45 min
+[INFO] Finished at: 2026-05-07T23:35:24+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.3:run (default-cli) on project Testiva: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
